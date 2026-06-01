@@ -13,8 +13,8 @@ def tensor_op(x, y, op):
     elif op == "matmul":
         res = torch.matmul(tx, ty)
     elif op == "power":
-        # res = torch.pow(tx, ty)
-        res = tx ** ty
+        res = torch.pow(tx, ty)
+        # res = tx ** ty
     elif op == "max":
         res = torch.max(tx, ty)
     else:
