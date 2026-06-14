@@ -5,9 +5,9 @@ def create_sequence(start, stop, param, kind):
     Returns: 1D ndarray of float64 values
     """
     if kind == "arange":
-        return np.arange(start, stop, float(param))
+        return np.arange(start, stop, param, dtype=np.float64)
 
     elif kind == "linspace":
         return np.linspace(start, stop, param)
-    else:
-        raise ValueError("kind must be either arange or linspace")
+    # else:
+    #     raise ValueError("kind must be either arange or linspace")
