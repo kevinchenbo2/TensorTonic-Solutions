@@ -4,7 +4,7 @@ def reshape_tensor(x, op):
     """
     Returns: list
     """
-    x = torch.tensor(x).double()
+    x = torch.tensor(x, dtype=torch.float32)
     
     if op == "flatten":
         return x.view(-1)
@@ -15,4 +15,4 @@ def reshape_tensor(x, op):
     elif op == "transpose":
         return x.transpose(0,1)
 
-    thro
+    raise ValueError("not a valid operation")
